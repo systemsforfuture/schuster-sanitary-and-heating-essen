@@ -343,7 +343,7 @@ const stickyObs=new IntersectionObserver(([e])=>{document.getElementById('sticky
 stickyObs.observe(document.querySelector('.hero'));
 addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',scrollY>80),{passive:true});
 const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:0.15,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll(')}));
+document.querySelectorAll('section, .svc-card, .gallery-item, .review-card, .about-grid, .contact-card').forEach(el => io.observe(el));
 </script>
 
 <!-- Scroll Reveal -->
